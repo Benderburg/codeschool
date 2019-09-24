@@ -30,7 +30,7 @@
 		height: 46px;
 	}
 
-	button {
+	button:not(.close) {
 		background: $primary;
 		color: #fff;
 		padding: 13px 40px;
@@ -49,6 +49,11 @@
 }
 /* /home */
 /* contact */
+
+.done {
+	display: none;
+}
+
 .contact {
 	background: url(../images/bg1.jpg) no-repeat 0 0;
 	background-size: cover;
@@ -86,7 +91,7 @@
 		width: 100%;
 	}
 
-	button {
+	button:not(.close) {
 		height: unset;
 		outline: none;
 		padding: 15px 0;

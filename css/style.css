@@ -20,7 +20,7 @@
   padding: 12px; }
 .intro-section .container .home-form textarea.form-control {
   height: 46px; }
-.intro-section .container .home-form button {
+.intro-section .container .home-form button:not(.close) {
   background: #478cce;
   color: #fff;
   padding: 13px 40px;
@@ -38,6 +38,9 @@
 
 /* /home */
 /* contact */
+.done {
+  display: none; }
+
 .contact {
   background: url(../images/bg1.jpg) no-repeat 0 0;
   background-size: cover;
@@ -68,7 +71,7 @@
   min-height: 110px;
   resize: none;
   width: 100%; }
-.contact_grid_right button {
+.contact_grid_right button:not(.close) {
   height: unset;
   outline: none;
   padding: 15px 0;
