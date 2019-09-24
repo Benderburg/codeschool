@@ -115,25 +115,28 @@
             </p>
             <!-- form -->
             <div class="home-form mt-5">
-              <form action="#" method="post">
+              <div class="done">
+                <div class="alert alert-success text-center">
+                  <button type="button" class="close" data-dismiss="alert">×</button>
+                  Спасибо! Заявка успешно отправлена.
+                </div>
+              </div>
+              <form action="#" method="post" id="signup">
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <input class="form-control" type="text" name="Name" placeholder="Имя"
-                             required="">
+                      <input class="form-control" type="text" name="name" placeholder="Имя" required="">
                     </div>
                     <div class="form-group">
-                      <input class="form-control" type="text" name="Name" placeholder="Фамилия"
-                             required="">
+                      <input class="form-control" type="text" name="surname" placeholder="Фамилия">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <input class="form-control" type="email" name="Name" placeholder="E-mail"
-                             required="">
+                      <input class="form-control" type="email" name="email" placeholder="E-mail" required="">
                     </div>
                     <div class="form-group">
-                      <input class="form-control" name="phone" placeholder="Телефон" type="number" required="">
+                      <input class="form-control" name="phone" placeholder="Телефон" type="tel" required="">
                     </div>
                   </div>
                 </div>
@@ -511,22 +514,28 @@
             <span>Напишите нам</span>
         </h2>
         <div class="contact_grid_right pt-4">
-          <form action="#" method="post">
+          <div class="done">
+            <div class="alert alert-success text-center">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              Спасибо! Ваше сообщение успешно отправлено.
+            </div>
+          </div>
+          <form action="#" method="post" id="message">
             <div class="row contact_left_grid">
               <div class="col-lg-6 con-left" data-aos="fade-up">
                 <div class="form-group">
-                  <input class="form-control" type="text" name="Name" placeholder="Имя" required="">
+                  <input class="form-control" type="text" name="name" placeholder="Имя" required="">
                 </div>
                 <div class="form-group">
-                  <input class="form-control" type="email" name="Email" placeholder="Email адрес" required="">
+                  <input class="form-control" type="email" name="email" placeholder="Email адрес" required="">
                 </div>
                 <div class="form-group">
-                  <input class="form-control" type="text" name="Subject" placeholder="Тема" required="">
+                  <input class="form-control" type="text" name="subject" placeholder="Тема" required="">
                 </div>
               </div>
               <div class="col-lg-6 con-right" data-aos="fade-up">
                 <div class="form-group">
-                  <textarea id="textarea" placeholder="Текст сообщения" required=""></textarea>
+                  <textarea id="textarea" name="comment" placeholder="Текст сообщения" required=""></textarea>
                 </div>
                 <div class="sub-honey">
                   <button class="form-control btn" type="submit">Отправить</button>
@@ -558,5 +567,6 @@
   <script src="js/jquery.sticky.js"></script>
   <script src="js/jquery.mb.YTPlayer.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 </html>
