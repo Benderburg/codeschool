@@ -46,8 +46,8 @@ if ($post) {
 		$header = "Content-Type: text/plain; charset=utf-8\n";
 
 		/* Please, setup a host-like mail address to have good response on submit */
-		$header .= "From: Новое сообщение <example@mailing.com>\n\n";
-		$mail = mail("vonbenderburg@gmail.com", $subject1, iconv('utf-8', 'windows-1251', $message1), iconv('utf-8', 'windows-1251', $header));
+		$header .= "From: Новое сообщение <contact@codeschool-iti.ru>\n\n";
+		$mail = mail("codeschool.iti@gmail.com", $subject1, iconv('utf-8', 'windows-1251', $message1), iconv('utf-8', 'windows-1251', $header));
 
 		if ($mail) {
 			echo 'OK';

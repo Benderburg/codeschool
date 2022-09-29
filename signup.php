@@ -5,12 +5,22 @@ $post = (!empty($_POST)) ? true : false;
 if ($post) {
 	$name = htmlspecialchars($_POST['name']);
 	$surname = htmlspecialchars($_POST['surname']);
+	$school = htmlspecialchars($_POST['school']);
+	$classroom = htmlspecialchars($_POST['classroom']);
 	$email = htmlspecialchars($_POST['email']);
 	$tel = htmlspecialchars($_POST["phone"]);
 	$error = '';
 
 	if (!$name) {
 		$error .= 'Пожалуйста введите ваше имя<br />';
+	}
+	
+	if (!$school) {
+		$error .= 'Пожалуйста введите название школы<br />';
+	}
+	
+	if (!$classroom) {
+		$error .= 'Пожалуйста введите ваш класс<br />';
 	}
 
 // Проверка телефона
@@ -42,12 +52,18 @@ if ($post) {
 		$subject = "Новая заявка с сайта Школы Программирования";
 		$subject1 = "=?utf-8?b?" . base64_encode($subject) . "?=";
 
-		$message1 = "\n\nИмя: " . $name. "\n\nФамилия: " . $surname . "\n\n" . "\n\nТелефон: " . $tel . "\n\nE-mail: " . $email . "\n\nХочет записаться на курсы.";
+		$message1 = "\n\nИмя: " . $name . 
+					"\n\nФамилия: " . $surname . 
+					"\n\nШкола: " . $school . 
+					"\n\nКласс: " . $classroom . 
+					"\n\nТелефон: " . $tel . 
+					"\n\nE-mail: " . $email . 
+					"\n\nХочет записаться на курсы.";
 		$header = "Content-Type: text/plain; charset=utf-8\n";
 
 		/* Please, setup a host-like mail address to have good response on submit */
-		$header .= "From: Новая заявка <example@mailing.com>\n\n";
-		$mail = mail("vonbenderburg@gmail.com", $subject1, iconv('utf-8', 'windows-1251', $message1), iconv('utf-8', 'windows-1251', $header));
+		$header .= "From: Новая заявка <contact@codeschool-iti.ru>\n\n";
+		$mail = mail("codeschool.iti@gmail.com", $subject1, iconv('utf-8', 'windows-1251', $message1), iconv('utf-8', 'windows-1251', $header));
 
 		if ($mail) {
 			echo 'OK';
